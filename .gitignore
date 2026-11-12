@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Secrets (never commit env files; the example file is the exception)
+.env*
+!.env.example
+
+# Build output
+.next/
+dist/
+.turbo/
+.vercel/
+
+# Tests
+coverage/
+test-results/
+playwright-report/
+
+# Logs
+*.log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
