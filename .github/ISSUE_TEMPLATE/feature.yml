@@ -1,0 +1,72 @@
+name: Feature
+description: Plan a new feature or a piece of one
+title: "feat: "
+labels: ["feat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue = one small, mergeable piece of work. Fake data only, never real patient data.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / why
+      description: Who needs this, and what goes wrong without it?
+      placeholder: Receptionists can't find a returning patient quickly, so they create duplicates.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      value: "As a <role>, I want <action>, so that <benefit>."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Each item must be testable. The issue is done when every box is ticked.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - web
+        - api
+        - database
+        - infra
+        - docs
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and permissions
+      description: Which roles can do this? Does it touch clinic isolation, patient data, auth or secrets? Which security tests prove it?
+      placeholder: |
+        Roles: receptionist, doctor (read only)
+        Clinic isolation: yes, a user must never see another clinic's patients
+        Tests: 403 for the nurse role; 404 for a patient from another clinic
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this issue will NOT do (so it stays small).
+    validations:
+      required: false
