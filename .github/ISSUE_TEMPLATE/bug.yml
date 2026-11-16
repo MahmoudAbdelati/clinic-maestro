@@ -1,0 +1,78 @@
+name: Bug
+description: Report something that is broken
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security bug or data leak? Mark severity as critical and fix it before anything else.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you see? Paste the error message if there is one (no tokens, no passwords).
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - web
+        - api
+        - database
+        - infra
+        - docs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - low
+        - medium
+        - high
+        - critical (security / data leak)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "local / live demo, Chrome 1xx, Windows 11"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: fake-data
+    attributes:
+      label: Data check
+      options:
+        - label: I used fake data only. This report has no real patient data, passwords or tokens.
+          required: true
