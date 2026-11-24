@@ -5,8 +5,10 @@
   "description": "Multi-tenant clinic management platform (Next.js + NestJS monorepo).",
   "type": "module",
   "scripts": {
+    "dev": "turbo run dev",
     "build": "turbo run build",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
   },
   "engines": {
     "node": ">=26"
