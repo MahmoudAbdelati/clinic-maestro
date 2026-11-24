@@ -28,7 +28,7 @@ I'm Mahmoud, a former doctor. I'm building it to land my first developer job and
 
 ### Versions and docs
 - **Check the current version and official docs** of Next.js, NestJS, Prisma and every other tool before teaching it. Warn me when a tutorial or common pattern is outdated (known traps: Next 16 `proxy.ts` + async APIs, Prisma 7 config/adapters, Tailwind 4 CSS-first config, Zod 4, ESLint flat config, TypeScript 7 + Nest decorators).
-- Node 26 LTS (`.nvmrc`). Tests: Jest + Supertest (api), Vitest + React Testing Library (web), Playwright (E2E).
+- Node 26 LTS (`.nvmrc`). Tests: Vitest everywhere (Nest 12 default): Vitest + Supertest (api), Vitest + React Testing Library (web), Playwright (E2E).
 
 ### Every feature follows this loop (master plan §7)
 1. **Plan:** short spec (what, who, screens, data, permissions, edge cases).
